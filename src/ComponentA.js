@@ -29,8 +29,8 @@ export default class ComponentA extends React.Component{
         return(<>
           <h1>{this.state.name}</h1>
             <ul>
-                {this.state.data.map((d)=>{
-                    return <li>{d.username}</li>
+                {this.state.data.map((d,index)=>{
+                    return <li key={index}>{d.username}</li>
                 })}
             </ul>
             </>
